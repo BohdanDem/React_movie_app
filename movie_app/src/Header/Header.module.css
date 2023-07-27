@@ -1,0 +1,19 @@
+.header {
+    height: 100px;
+    background-color: lightcyan;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    margin: 0 200px;
+}
+
+.header a:hover {
+    color: #3131b9;
+}
