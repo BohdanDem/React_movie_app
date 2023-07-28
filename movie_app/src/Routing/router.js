@@ -1,7 +1,7 @@
 import {createBrowserRouter} from "react-router-dom";
 import {AppMainLayout} from "../AppMainLayout/AppMainLayout";
 import {AppRoutes} from "./AppRoutes";
-import MoviesListCards from "../Components/MoviesListCards";
+import MoviesListCards from "../Components/MoviesListCards/MoviesListCards";
 
 export const router = createBrowserRouter([
     {

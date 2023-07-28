@@ -1,15 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import {GetPosterPreview} from "../../Services/ApiServices";
+import React from 'react';
+import {posterURL} from "../../API/EndPoints";
+import styles from './PosterPreview.module.css'
 
-const PosterPreview = ({poster_path}) => {
-
-    const [ posterPreview, setPosterPreview ] = useState(null);
-
-    useEffect(() => {GetPosterPreview.getPosterPreview(setPosterPreview, poster_path)}, [])
+const PosterPreview = ({poster_path, title}) => {
     
     return (
         <div>
-            <div>{posterPreview}</div>
+            <img className={styles.poster} src={posterURL + poster_path} alt={title}/>
         </div>
     );
 };

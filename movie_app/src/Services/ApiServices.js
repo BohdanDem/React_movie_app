@@ -1,5 +1,5 @@
 import axios from "axios";
-import {baseURL, EndPoints, posterURL} from "../API/EndPoints";
+import {baseURL, EndPoints} from "../API/EndPoints";
 
 const tokenOptions = axios.create({
     headers: {
@@ -11,12 +11,5 @@ export const GetMoviesListCards = {
     getMoviesListCards: async (setMoviesListCards) => {
         let response = await tokenOptions.get(baseURL + EndPoints.movies)
         setMoviesListCards(response.data.results);
-    }
-}
-
-export const GetPosterPreview = {
-    getPosterPreview: async (setPosterPreview, poster_path) => {
-        let response = await tokenOptions.get(posterURL + poster_path)
-        setPosterPreview(response.data.url);
     }
 }
