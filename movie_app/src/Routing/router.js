@@ -10,11 +10,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: AppRoutes.Movie,
-                element: <MoviesListCards/>
+                element: <MoviesListCards/>,
             },
             {
                 path: AppRoutes.Music,
-                element: <h1>The music page isn't implemented yet</h1>,
+                element: <h1>The Genres page isn't implemented yet</h1>,
             }
         ]
     }

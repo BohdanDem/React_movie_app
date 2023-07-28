@@ -13,3 +13,10 @@ export const GetMoviesListCards = {
         setMoviesListCards(response.data.results);
     }
 }
+
+export const GetMovieInfo = {
+    getMovieInfo: async (setMovieInfo, id) => {
+        let response = await tokenOptions.get(baseURL + EndPoints.movieInfo + id)
+        setMovieInfo(response.data);
+    }
+}

@@ -5,7 +5,7 @@ export const Header = () => {
     return (
         <div className={styles.header}>
             <NavLink to={''}>Movies</NavLink>
-            <NavLink to={'/music'}>Music</NavLink>
+            <NavLink to={'/music'}>Genres</NavLink>
         </div>
     );
 };

@@ -1,0 +1,15 @@
+.MovieInfo {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.MovieInfo img {
+    width: 250px;
+    height: 380px;
+    margin-right: 40px;
+}
+
+.description {
+    width: 500px;
+}
