@@ -1,1 +1,5 @@
-export const baseURL = 'https://api.themoviedb.org/3/discover/movie'
+export const baseURL = 'https://api.themoviedb.org/3'
+
+export  const EndPoints = {
+    movies: '/discover/movie'
+}

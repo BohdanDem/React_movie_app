@@ -1,6 +1,7 @@
 import {createBrowserRouter} from "react-router-dom";
 import {AppMainLayout} from "../AppMainLayout/AppMainLayout";
 import {AppRoutes} from "./AppRoutes";
+import MoviesListCards from "../Components/MoviesListCards";
 
 export const router = createBrowserRouter([
     {
@@ -9,7 +10,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: AppRoutes.Movie,
-                element: <h1>Welcome</h1>,
+                element: <MoviesListCards/>
             },
             {
                 path: AppRoutes.Music,
