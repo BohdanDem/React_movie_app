@@ -8,9 +8,10 @@ const tokenOptions = axios.create({
 });
 
 export const GetMoviesListCards = {
-    getMoviesListCards: async (setMoviesListCards) => {
+    getMoviesListCards: async (setMoviesListCards, setMovieInfoFirstId) => {
         let response = await tokenOptions.get(baseURL + EndPoints.movies)
-        setMoviesListCards(response.data.results);
+        setMoviesListCards(response.data.results)
+        setMovieInfoFirstId(response.data.results[0].id);
     }
 }
 

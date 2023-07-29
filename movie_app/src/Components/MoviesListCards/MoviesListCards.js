@@ -7,20 +7,28 @@ import MovieInfo from "../ MovieInfo/ MovieInfo";
 const MoviesListCards = () => {
 
     const [ moviesListCards, setMoviesListCards ] = useState([]);
+    const [ movieInfoFirstId, setMovieInfoFirstId ] = useState([]);
+    const [ movieInfoId, setMovieInfoId ] = useState(null);
 
-    useEffect(() => {GetMoviesListCards.getMoviesListCards(setMoviesListCards)}, [])
+    useEffect(() => {GetMoviesListCards.getMoviesListCards(setMoviesListCards, setMovieInfoFirstId)}, [])
 
     return (
         <div>
             <div>
-                <MovieInfo moviesListCards={moviesListCards} />
+                <MovieInfo
+                    moviesListCards={moviesListCards}
+                    movieInfoFirstId={movieInfoFirstId}
+                    movieInfoId={movieInfoId}
+                />
             </div>
             <div className={styles.wrapper}>
                 {moviesListCards.map((moviesListCard) => {
                     return (
-                        <>
-                            <MoviesListCard key={moviesListCard.id} moviesListCard={moviesListCard}/>
-                        </>
+                        <MoviesListCard
+                            key={moviesListCard.id}
+                            moviesListCard={moviesListCard}
+                            setMovieInfoId={setMovieInfoId}
+                        />
                     )
                 })}
             </div>

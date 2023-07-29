@@ -1,4 +1,4 @@
 export const AppRoutes = {
     Movie: '/',
-    Music: '/music'
+    Genres: '/genres'
 }

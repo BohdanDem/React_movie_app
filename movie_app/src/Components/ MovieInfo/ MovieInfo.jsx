@@ -3,15 +3,12 @@ import {GetMovieInfo} from "../../Services/ApiServices";
 import {posterURL} from "../../API/EndPoints";
 import styles from './MovieInfo.module.css'
 
-const MovieInfo = ({moviesListCards}) => {
-
-    // const firstMovie = moviesListCards[0].id
-    // console.log(firstMovie);
+const MovieInfo = ({movieInfoFirstId, movieInfoId}) => {
 
     const [ movieInfo, setMovieInfo ] = useState([]);
-    let id = 298618
+    let id = movieInfoId? movieInfoId : movieInfoFirstId
 
-    useEffect(() => {GetMovieInfo.getMovieInfo(setMovieInfo, id)}, [])
+    useEffect(() => {GetMovieInfo.getMovieInfo(setMovieInfo, id)}, [id])
 
     const {title, poster_path, overview} = movieInfo
     return (
