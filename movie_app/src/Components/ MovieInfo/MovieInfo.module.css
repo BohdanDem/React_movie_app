@@ -13,4 +13,21 @@
 
 .description {
     width: 500px;
+    padding: 20px 0;
+}
+
+.description button {
+    margin-top: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 7px;
+    background-color: #1b6b6b;
+}
+
+.description button:hover {
+    color: black;
+    background-color: #5a9a9a;
 }

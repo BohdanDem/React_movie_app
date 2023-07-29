@@ -2,6 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import {AppMainLayout} from "../AppMainLayout/AppMainLayout";
 import {AppRoutes} from "./AppRoutes";
 import MoviesListCards from "../Components/MoviesListCards/MoviesListCards";
+import MovieDetails from "../Components/MovieDetails/MovieDetails";
 
 export const router = createBrowserRouter([
     {
@@ -15,6 +16,11 @@ export const router = createBrowserRouter([
             {
                 path: AppRoutes.Genres,
                 element: <h1>The Genres page isn't implemented yet</h1>,
+            },
+            {
+                path: AppRoutes.MovieDetails,
+                element: <MovieDetails/>,
+
             }
         ]
     }

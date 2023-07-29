@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import MoviesListCard from "./MoviesListCard/MoviesListCard";
 import {GetMoviesListCards} from "../../Services/ApiServices";
 import styles from './MoviesListCards.module.css'
-import MovieInfo from "../ MovieInfo/ MovieInfo";
+import MovieInfo from "../ MovieInfo/MovieInfo";
 
 const MoviesListCards = () => {
 
@@ -15,6 +15,7 @@ const MoviesListCards = () => {
     return (
         <div>
             <div>
+
                 <MovieInfo
                     moviesListCards={moviesListCards}
                     movieInfoFirstId={movieInfoFirstId}

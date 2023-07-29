@@ -21,3 +21,10 @@ export const GetMovieInfo = {
         setMovieInfo(response.data);
     }
 }
+
+export const GetMovieDetails = {
+    getMovieDetails: async (setMovieDetails, id) => {
+        let response = await tokenOptions.get(baseURL + EndPoints.movieInfo + id)
+        setMovieDetails(response.data);
+    }
+}
