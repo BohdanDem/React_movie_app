@@ -20,7 +20,6 @@ export const router = createBrowserRouter([
             {
                 path: AppRoutes.MovieDetails,
                 element: <MovieDetails/>,
-
             }
         ]
     }

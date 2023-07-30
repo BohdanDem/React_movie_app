@@ -5,8 +5,9 @@ import {posterURL} from "../../API/EndPoints";
 
 const MovieDetails = () => {
 
-    const [ movieDetails, setMovieDetails ] = useState([]);
     const {id} = useParams()
+
+    const [ movieDetails, setMovieDetails ] = useState([]);
 
     useEffect(() => {GetMovieDetails.getMovieDetails(setMovieDetails, id)}, [id])
 
