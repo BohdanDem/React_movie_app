@@ -9,22 +9,31 @@ const tokenOptions = axios.create({
 
 export const GetMoviesListCards = {
     getMoviesListCards: async (setMoviesListCards, setMovieInfoFirstId) => {
-        let response = await tokenOptions.get(baseURL + EndPoints.movies)
-        setMoviesListCards(response.data.results)
-        setMovieInfoFirstId(response.data.results[0].id);
+        try {
+            let response = await tokenOptions.get(baseURL + EndPoints.movies)
+            setMoviesListCards(response.data.results)
+            setMovieInfoFirstId(response.data.results[0].id);
+        } catch(err) {
+        }
     }
 }
 
 export const GetMovieInfo = {
     getMovieInfo: async (setMovieInfo, id) => {
-        let response = await tokenOptions.get(baseURL + EndPoints.movieInfo + id)
-        setMovieInfo(response.data);
+        try {
+            let response = await tokenOptions.get(baseURL + EndPoints.movieInfo + id)
+            setMovieInfo(response.data);
+        } catch(err) {
+        }
     }
 }
 
 export const GetMovieDetails = {
     getMovieDetails: async (setMovieDetails, id) => {
-        let response = await tokenOptions.get(baseURL + EndPoints.movieInfo + id)
-        setMovieDetails(response.data);
+        try {
+            let response = await tokenOptions.get(baseURL + EndPoints.movieInfo + id)
+            setMovieDetails(response.data);
+        }catch(err) {
+        }
     }
 }
