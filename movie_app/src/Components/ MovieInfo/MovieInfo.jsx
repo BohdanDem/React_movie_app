@@ -3,7 +3,6 @@ import {GetMovieInfo} from "../../Services/ApiServices";
 import {posterURL} from "../../API/EndPoints";
 import styles from './MovieInfo.module.css'
 import {useNavigate} from "react-router-dom";
-import {AppRoutes} from "../../Routing/AppRoutes";
 
 const MovieInfo = ({movieInfoFirstId, movieInfoId}) => {
 
@@ -13,7 +12,7 @@ const MovieInfo = ({movieInfoFirstId, movieInfoId}) => {
 
     useEffect(() => {GetMovieInfo.getMovieInfo(setMovieInfo, Id)}, [Id])
 
-    const handleClick = (id) => navigate(AppRoutes.MovieDetails + '/' + id)
+    const handleClick = (id) => navigate(`/movieDetails/${id}`)
 
     const {id, title, poster_path, overview} = movieInfo
     return (

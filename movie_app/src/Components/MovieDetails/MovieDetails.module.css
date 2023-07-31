@@ -1,0 +1,17 @@
+.Movie {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.Movie img {
+    width: 500px;
+    height: 750px;
+    margin-right: 40px;
+    border-radius: 15px;
+}
+
+.description {
+    width: 700px;
+    padding: 20px 0;
+}
