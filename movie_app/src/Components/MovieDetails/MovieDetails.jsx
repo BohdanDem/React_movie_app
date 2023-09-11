@@ -4,6 +4,7 @@ import {GetMovieDetails} from "../../Services/ApiServices";
 import {posterURL} from "../../API/EndPoints";
 import styles from './MovieDetails.module.css'
 import MovieGenres from "../MovieGenres/MovieGenres";
+import StarRating from "./StarRating/StarRating";
 
 const MovieDetails = () => {
 
@@ -18,7 +19,7 @@ const MovieDetails = () => {
             <img src={posterURL + poster_path} alt={title}/>
             <div className={styles.description}>
                 <h2>{title}</h2>
-                <h3>{vote_average}/10</h3>
+                <div><StarRating vote_average={vote_average}/></div>
                 <div><MovieGenres genres={genres}/></div>
                 <div>{overview}</div>
             </div>
